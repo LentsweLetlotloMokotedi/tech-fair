@@ -49,7 +49,7 @@
 
     <div class="overlay__row">
       <button class="button" type="button" data-add-cancel>Cancel</button>
-      <button class="button button_primary" type="submit" form="add-form">Add</button>
+      <button class="button button_primary" type="submit" form="add-form">Pay</button>
     </div>
   </dialog>
 
@@ -63,7 +63,7 @@
       <input hidden name="id" data-edit-id>
 
       <label class="overlay__field">
-        <div class="overlay__label">Item</div>
+        <div class="overlay__label">Amount</div>
         <input class="overlay__input" data-edit-title name="title" required>
       </label>
 
@@ -76,9 +76,9 @@
         <div class="overlay__label">Status</div>
 
         <select class="overlay__input overlay__input_select" data-edit-column name="column">
-          <option value="ordered">Ordered</option>
-          <option value="preparing">Preparing</option>
-          <option value="served">Served</option>
+          <option value="ordered">Paid</option>
+          <option value="preparing">Banked</option>
+          <option value="served">History</option>
         </select>
       </label>
 

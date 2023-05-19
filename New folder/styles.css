@@ -1,158 +1,205 @@
 /*styles.css*/
 
+@keyframes payAnimation {
+  0% {
+    background-color: #ff0000; /* Change to red */
+  }
+  50% {
+    background-color: #0000ff; /* Change to blue */
+  }
+  100% {
+    background-color: #ff0000; /* Change to red */
+  }
+}
+
+@keyframes bestAnimation {
+  0% {
+    background-color: #800080; /* Change to purple */
+  }
+  50% {
+    background-color: #9f94a4; /* Change to green */
+  }
+  100% {
+    background-color: #800080; /* Change to purple */
+  }
+}
+
+@keyframes bgAnimation {
+  0% {
+    background-color: #ff0000; /* Change to red */
+  }
+  50% {
+    background-color: #a5bcc9; /* Change to a different color */
+  }
+  100% {
+    background-color: #ff0000; /* Change to red */
+  }
+}
 
 @keyframes enter {
-    0% {
-      opacity: 0;
-      transform: translateY(2rem);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(2rem);
   }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  width: 100%;
+  font-family: Arial, sans-serif; /* Change font family */
+  color: rgba(0, 0, 0, 0.9);
+  padding: 0;
+}
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.actions {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1rem;
+  border-top: rgba(0, 0, 0, 1);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    animation: bgAnimation 30s linear infinite;
+}
+
+/* Add other styles and modifications as needed */
+
   
-  * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    margin: 0;
-    min-height: 100vh;
-    width: 100%;
-    font-family: sans-serif;
-    color: rgba(0, 0, 0, 0.9);
-    padding: 0;
-  }
-  
-  .sr-only {
-    position:absolute;
-    left:-10000px;
-    top:auto;
-    width:1px;
-    height:1px;
-    overflow:hidden;
-  }
-  
-  .actions {
-    display: flex;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    padding: 1rem;
-    border-top: rgba(0, 0, 0, 1);
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    background: rgba(255, 255, 255, 1);
-  }
-  
-  .actions__inner {
-    width: 100%;
-    max-width: 15rem;
-  }
-  
-  .help {
-    position: fixed;
-    bottom: 7rem;
-    right: 2rem;
-    height: 3rem;
-    width: 3rem;
-    border-radius: 50%;
-    background: rgba(0, 160, 70, 0.8);
-    border-width: 0;
-    cursor: pointer;
-    font-size: 1.5rem;
-    color: rgba(255, 255, 255, 1);
-  }
-  
-  .help:hover {
-    background: rgba(0, 160, 70, 1);
-  }
-  
-  .grid {
-    display: flex;
-    width: 100%;
-    max-width: 70rem;
-    margin: 0 auto;
-    overflow-x: scroll;
-    min-height: 100vh;
-  }
-  
-  .grid__column {
-    width: 100%;
-    min-width: 18rem;
-    min-height: 100vh;
-    height: 100%;
-    border-right: 1px solid rgba(0, 0, 0, 0.5);
-  }
-  
-  .grid__column_last {
-    border-right-width: 0;
-  }
-  
-  .grid__title {
-    font-size: 2rem;
-    margin: 0;
-    padding: 1rem 2rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-    letter-spacing: -0.05rem;
-    color: rgba(0, 0, 0, 0.8);
-  }
-  
-  .button {
-    font-family: sans-serif;
-    background-color: rgba(0, 160, 70, 0.1);
-    transition: background-color 0.1s;
-    border-width: 0;
-    border-radius: 6px;
-    height: 3.5rem;
-    cursor: pointer;
-    width: 50%;
-    color: rgba(0, 160, 70, 1);
-    font-size: 1rem;
-    border: 1px solid rgba(0, 160, 70, 1);
-    width: 100%;
-  }
-  
-  .button_primary {
-    background-color: rgba(0, 160, 70, 0.8);
-    color: rgba(255, 255, 255, 1);
-  }
-  
-  .button:hover {
-    background-color: rgba(0, 160, 70, 0.2);
-  }
-  
-  .button_primary:hover {
-    background-color: rgba(0, 160, 70, 1);
-  }
-  
-  .order {
-    border-width: 0;
-    width: 100%;
-    font-family: sans-serif;
-    padding: 0.5rem;
-    cursor: pointer;
-    text-align: left;
-    height: 8rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    border-radius: 2px;
-    padding: 0 2rem;
-    border: 1px solid rgba(0, 0, 0, 0);
-    border-bottom-color: rgba(0, 0, 0, 0.1);
-    user-select: none;
-    animation-duration: 0.6s;
-    animation-name: enter;
-    cursor: move;
-  }
+ /*styles.css*/
+
+.actions__inner {
+  width: 100%;
+  max-width: 15rem;
+}
+
+.help {
+  background-color: black;
+  position: fixed;
+  bottom: 7rem;
+  right: 2rem;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%; /* Change to a different value for a different shape */
+  border-width: 0;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: rgb(255, 255, 255);
+}
+
+.help:hover {
+  background: rgba(0, 160, 70, 1);
+}
+
+.grid {
+  display: flex;
+  width: 100%;
+  max-width: 70rem;
+  margin: 0 auto;
+  overflow-x: scroll;
+  min-height: 100vh;
+}
+
+.grid__column {
+  width: 100%;
+  min-width: 18rem;
+  min-height: 100vh;
+  height: 100%;
+  border-right: 1px solid rgba(0, 0, 0, 0.5);
+  animation: bestAnimation 40s linear infinite;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+}
+
+.grid__column_last {
+  border-right-width: 0;
+  background-image: ;
+  animation: bgAnimation 30s linear infinite;
+}
+
+.grid__title {
+  font-size: 2rem;
+  margin: 0;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  letter-spacing: -0.05rem;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.button {
+  font-family: sans-serif;
+  background-color: rgba(57, 3, 3, 0.1);
+  transition: background-color 0.1s;
+  border-width: 0;
+  border-radius: 6px; /* Change to a different value for a different shape */
+  height: 3.5rem;
+  cursor: pointer;
+  width: 50%;
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  border: 3px solid rgba(0, 160, 70, 1);
+  width: 100%;
+  animation: payAnimation 10s linear infinite;
+}
+
+.button_primary {
+  background-color: rgba(229, 229, 229, 0.8);
+  color: rgba(255, 255, 255, 1);
+}
+
+.button:hover {
+  background-color: rgba(0, 160, 70, 0.2);
+}
+
+.button_primary:hover {
+  background-color: rgba(0, 160, 70, 1);
+}
+
+.order {
+  border-width: 0;
+  width: 100%;
+  font-family: sans-serif;
+  padding: 0.5rem;
+  cursor: pointer;
+  text-align: left;
+  height: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  border-radius: 10px; /* Change to a different value for a different shape */
+  padding: 0 2rem;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-bottom-color: rgba(0, 0, 0, 0.1);
+  user-select: none;
+  animation-duration: 0.6s;
+  animation-name: enter;
+  cursor: move;
+}
+
+/* Add other styles and modifications as needed */
+
   
   .order:hover {
     background: rgba(0, 160, 70, 0.05);
@@ -283,6 +330,7 @@
     cursor: pointer;
     border-radius: 4px;
     padding: 1rem;
+    border-radius: 12px;
   }
   
   .overlay__delete:hover {
@@ -304,3 +352,30 @@
   .overlay[open] ~ .backdrop {
     display: block;
   }
+
+
+  .help {
+    animation: vibration 0.4s linear 5;
+  }
+  
+  @keyframes vibration {
+    0% {
+      transform: translateX(0);
+    }
+    20% {
+      transform: translateX(-5px) rotate(-2deg);
+    }
+    40% {
+      transform: translateX(5px) rotate(2deg);
+    }
+    60% {
+      transform: translateX(-5px) rotate(-2deg);
+    }
+    80% {
+      transform: translateX(5px) rotate(2deg);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
