@@ -1,0 +1,174 @@
+@keyframes bestAnimation {
+  0% {
+    background-color: #fcd8f8;
+  }
+  50% {
+    background-color: #d39191;
+  }
+  100% {
+    background-color: #fcd8f8;
+  }
+}
+
+@keyframes bgAnimation {
+  0% {
+    background-color: #007bff;
+  }
+  50% {
+    background-color: #e60000;
+  }
+  100% {
+    background-color: #007bff;
+  }
+}
+
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #f4f4f4;
+  color: #333;
+  animation: bestAnimation 10s linear infinite;
+}
+
+header {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #0072bb;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  animation: bgAnimation 10s linear infinite;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+main {
+  padding: 40px;
+}
+
+section {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  padding: 10px;
+  width: 300px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+input[type="submit"] {
+  padding: 12px 40px;
+  font-size: 18px;
+  background-color: #0072bb;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #005a8d;
+}
+
+footer {
+  background-color: #0072bb;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* .slogan {
+  opacity: 0;
+  animation: fade-in 5s ease-in-out forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+} */
+
+.slogan {
+  animation: move-up-down 2s ease-in-out infinite alternate;
+}
+
+@keyframes move-up-down {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+
+
+.namee {
+  animation: vibration 0.2s linear 5;
+}
+
+@keyframes vibration {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-5px) rotate(-2deg);
+  }
+  40% {
+    transform: translateX(5px) rotate(2deg);
+  }
+  60% {
+    transform: translateX(-5px) rotate(-2deg);
+  }
+  80% {
+    transform: translateX(5px) rotate(2deg);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
