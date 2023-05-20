@@ -30,7 +30,10 @@
 
 body {
   font-family: 'Times New Roman', Times, serif;
-  background-color: #f4f4f4;
+  background-image: url(../images/bar.jpg);
+  background-size: cover; /* Adjust the background-size property as needed */
+  background-repeat: no-repeat; /* Adjust the background-repeat property as needed */
+  background-position: center; /* Adjust the background-position property as needed */
   color: #333;
   animation: bestAnimation 10s linear infinite;
 }
@@ -172,3 +175,6 @@ footer p {
   }
 }
 
+body {
+  color: #ffffff;
+}

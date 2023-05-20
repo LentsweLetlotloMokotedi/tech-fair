@@ -5,14 +5,14 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kitchen Express</title>
+  <title>BCL PayApp</title>
   <link rel="stylesheet" href="./styles.css">
   <script src="./scripts.js" defer type="module"></script>
 </head>
 
 <body>
   <header class="actions">
-    <h1 class="sr-only">Kitchen Express</h1>
+    <h1 class="sr-only">BCL PayApp</h1>
     <div class="actions__inner">
       <button class="button button_primary" data-add>Pay</button>
     </div>
@@ -76,8 +76,8 @@
         <div class="overlay__label">Status</div>
 
         <select class="overlay__input overlay__input_select" data-edit-column name="column">
-          <option value="ordered">Paid</option>
-          <option value="preparing">Banked</option>
+          <option value="ordered">Balance</option>
+          <option value="preparing">Bank</option>
           <option value="served">History</option>
         </select>
       </label>
@@ -89,24 +89,25 @@
     </div>
   </dialog>
 
-  <h2 class="sr-only">Payments</h2>
+  <h2 class="sr-only" style="color: white;">Payments</h2>
 
   <div class="grid" data-grid>
     <section class="grid__column" data-area="ordered">
-      <h2 class="grid__title">Balance(R)</h2>
+      <h2 class="grid__title" style="color: white;">Balance(R)</h2>
       <div class="grid__content" data-column="ordered"></div>
     </section>
-
+  
     <section class="grid__column" data-area="preparing">
-      <h2 class="grid__title">Banking</h2>
+      <h2 class="grid__title" style="color: white;">Bank</h2>
       <div class="grid__content" data-column="preparing"></div>
     </section>
-
+  
     <section class="grid__column grid__column_last" data-area="served">
-      <h2 class="grid__title">History</h2>
+      <h2 class="grid__title" style="color: white;">History</h2>
       <div class="grid__content" data-column="served"></div>
     </section>
   </div>
+  
 
   <button class="help" data-help>?</button>
   <div class="backdrop"></div>

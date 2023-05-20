@@ -21,20 +21,21 @@ export const createOrderHtml = (order) => {
     const minutes = created.getMinutes().toString().padStart(2, '0')
 
     element.innerHTML = /* html */ `
-        <div class="order__title" data-order-title>${title}</div>
-        
-        <dl class="order__details">
-            <div class="order__row">
-                <dt>Account:</dt>
-                <dd class="order__value" data-order-table>${table}</dd>
-            </div>
+  <div class="order__title" data-order-title style="color: white;">${title}</div>
+  
+  <dl class="order__details">
+      <div class="order__row">
+          <dt style="color: white;">Account:</dt>
+          <dd class="order__value" data-order-table style="color: white;">${table}</dd>
+      </div>
 
-            <div class="order__row">
-                <dt>Time:</dt>
-                <dd class="order__value">${hours}:${minutes}</dd>
-            </div>
-        </dl>
-    `
+      <div class="order__row">
+          <dt style="color: white;">Time:</dt>
+          <dd class="order__value" style="color: white;">${hours}:${minutes}</dd>
+      </div>
+  </dl>
+`;
+
 
     return element
 }
