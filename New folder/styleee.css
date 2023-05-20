@@ -149,7 +149,6 @@ footer p {
 }
 
 
-
 .namee {
   animation: vibration 0.2s linear 5;
 }
@@ -177,4 +176,10 @@ footer p {
 
 body {
   color: #ffffff;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
