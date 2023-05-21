@@ -111,7 +111,7 @@ body {
 }
 
 .help:hover {
-  background: rgb(191, 191, 191);
+  animation: payAnimation 10s linear infinite;
 }
 
 .grid {
@@ -307,7 +307,7 @@ body {
   }
   
   .overlay__input:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+    animation: payAnimation 10s linear infinite;
   }
   
   .overlay__title {
