@@ -1,45 +1,60 @@
+const wrapper = document.querySelector('.wrapper');
+const loginLink = document.querySelector('.login-link');
+const registerLink = document.querySelector('.register-link');
+const btnPopup = document.querySelector('.btnLogin-popup');
+const iconClose = document.querySelector('.icon-close');
+
+registerLink.addEventListener('click', () => {
+    wrapper.classList.add('active');
+});
+
+loginLink.addEventListener('click', () => {
+    wrapper.classList.remove('active');
+});
+
+btnPopup.addEventListener('click', () => {
+    wrapper.classList.add('active-popup');
+});
+
+iconClose.addEventListener('click', () => {
+    wrapper.classList.remove('active-popup');
+});
+
 // Login Form Submission
-document.getElementById('loginForm').addEventListener('submit', function(event) {
+document.getElementById('login-form').addEventListener('submit', function (event) {
     event.preventDefault(); // Prevent form submission
-  
+
     // Get form values
-    var username = document.getElementById('username').value;
-    var password = document.getElementById('password').value;
-  
+    var username = document.querySelector('#login-form input[type="email"]').value;
+    var password = document.querySelector('#login-form input[type="password"]').value;
+
     // Perform authentication request (simulate server-side check)
-    // Replace this with your server-side code or API call
-    if (username === 'demo' && password === 'password') {
-      alert('Login successful!');
-      // Redirect to a new page or perform further actions
-      window.location.href = 'dashboard.html'; // Replace 'dashboard.html' with your desired next page
+    if (username === 'bclpay@gmail.com' && password === 'password') {
+        alert('Login successful!');
+        // Redirect to a new page or perform further actions
+        window.location.href = 'index.html';
     } else {
-      alert('Invalid username or password.');
+        alert('Invalid username or password.');
     }
-  
+
     // Clear form inputs
-    document.getElementById('username').value = '';
-    document.getElementById('password').value = '';
-  });
-  
-  // Sign-up Form Submission
-  document.getElementById('signupForm').addEventListener('submit', function(event) {
+    document.querySelector('#login-form input[type="email"]').value = '';
+    document.querySelector('#login-form input[type="password"]').value = '';
+});
+
+// Sign-up Form Submission
+document.getElementById('register-form').addEventListener('submit', function (event) {
     event.preventDefault(); // Prevent form submission
-  
+
     // Get form values
-    var newUsername = document.getElementById('name').value;
-    var newPassword = document.getElementById('password').value;
-  
-    // Perform sign-up request (simulate server-side registration)
-    // Replace this with your server-side code or API call
-    // You would typically store the new user in a database
+    var newUsername = document.querySelector('#register-form input[type="text"]').value;
+    var newPassword = document.querySelector('#register-form input[type="password"]').value;
+
+    window.location.href = 'index.html';
     alert('Sign-up successful!');
-    // Redirect to a new page or perform further actions
-    window.location.href = 'index.html'; // Replace 'dashboard.html' with your desired next page
-  
+
     // Clear form inputs
-    document.getElementById('name').value = '';
-    document.getElementById('email').value = '';
-    document.getElementById('phone').value = '';
-    document.getElementById('password').value = '';
-  });
-  
+    document.querySelector('#register-form input[type="text"]').value = '';
+    document.querySelector('#register-form input[type="email"]').value = '';
+    document.querySelector('#register-form input[type="password"]').value = '';
+});

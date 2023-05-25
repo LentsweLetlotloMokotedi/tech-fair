@@ -1,5 +1,17 @@
 /*styles.css*/
 
+@keyframes pAnimation {
+  0% {
+    background-color: #ff000044; /* Change to red */
+  }
+  50% {
+    background-color: #0000ff; /* Change to blue */
+  }
+  100% {
+    background-color: #ff0000; /* Change to red */
+  }
+}
+
 @keyframes payAnimation {
   0% {
     background-color: #ff0000; /* Change to red */
@@ -276,16 +288,16 @@ body {
   .overlay__input {
     width: 100%;
     margin-bottom: 0.5rem;
-    background-color: rgba(255, 255, 255, 0.729);
+    background-color: rgba(255, 255, 255, 0.432);
     border-width: 0;
     border-radius: 6px;
     width: 100%;
     height: 4rem;
-    color: rgba(0, 0, 0, 1);
+    color: rgb(0, 0, 0);
     padding: 1rem 0.5rem 0 0.75rem;
     font-size: 1.1rem;
     font-weight: bold;
-    font-family: Roboto, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     cursor: pointer;
   }
   
@@ -302,12 +314,12 @@ body {
     position: absolute;
     top: 0.75rem;
     left: 0.75rem;
-    font-size: 0.85rem;
-    color: rgba(0, 0, 0, 0.4);
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
   }
   
   .overlay__input:hover {
-    animation: payAnimation 10s linear infinite;
+    animation: pAnimation 10s linear infinite;
   }
   
   .overlay__title {

@@ -1,82 +1,115 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>BCL Pay App</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login and reg</title>
   <link rel="stylesheet" href="styleee.css">
 </head>
 <body>
-  <header>
-    <h1 class="namee">BCL Pay App</h1>
-    <h3 class="slogan">Simplify Your Payments with BCL Pay</h3>
-  </header>
   
-  <main>
-    <section>
-      <h2>Welcome to BCL Pay</h2>
-      <p>Log in or sign up to access your account.</p>
-    </section>
-    
-    <section>
-      <h2>Login</h2>
-      <form id="loginForm">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-        <br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-        <br>
-        <input type="submit" value="Login">
-      </form>
-    </section>
-    
-    <div class="flex-container">
-      <section>
-        <h2>Payment Details</h2>
-        <form id="paymentForm">
-          <label for="cardNumber">Card Number:</label>
-          <input type="text" id="cardNumber" name="cardNumber" required>
-          <br>
-          <label for="cardName">Cardholder Name:</label>
-          <input type="text" id="cardName" name="cardName" required>
-          <br>
-          <label for="expiryDate">Expiry Date:</label>
-          <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YYYY" required>
-          <br>
-          <label for="cvv">CVV:</label>
-          <input type="text" id="cvv" name="cvv" required>
-          <br>
-          <input type="submit" value="Submit Payment">
-        </form>
-      </section>
-    
-      <section>
-        <h2>Sign Up</h2>
-        <form id="signupForm">
-          <label for="name">Full Name:</label>
-          <input type="text" id="name" name="name" required>
-          <br>
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-          <br>
-          <label for="phone">Phone Number:</label>
-          <input type="text" id="phone" name="phone" required>
-          <br>
-          <label for="password">Password:</label>
-          <input type="password" id="password" name="password" required>
-          <br>
-          <input type="submit" value="Sign Up">
-        </form>
-      </section>
+    <header>
+      <h2 class="logo">BCL PayApp</h2>
+      <nav class="navigation">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+        <button class="btnLogin-popup">Login</button>
+      </nav>
+    </header>
+
+    <div class="wrapper">
+        <span class="icon-close">
+            <ion-icon name="close"></ion-icon>
+        </span>
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form id="login-form">
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+                    <input type="email" required>
+                    <label for="username">Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">
+                        Remember me</label>
+                        <a href="#">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="login-register">
+                    <p>Don't have an account?<a href="#" class="register-link">Signup</a></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-box register">
+            <h2>Signup</h2>
+            <form id="register-form">
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="person"></ion-icon>
+                    </span>
+                    <input type="text" required>
+                    <label>Username</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">
+                        I agree to the terms & conditions</label>
+                </div>
+                <button type="submit" class="btn">Register</button>
+                <div class="login-register">
+                    <p>Already have an account?<a href="#" class="login-link">Login</a></p>
+                </div>
+            </form>
+        </div>
     </div>
-    
-  </main>
-  
-  <footer>
-    <!-- Footer content goes here -->
-    <p>&copy; 2023 BCL Pay. All rights reserved.</p>
-  </footer>
 
-  <script src="pay.js"></script>
-
+    <script src="pay.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
+
+
+
+<!-- <section>
+    <h2>Payment Details</h2>
+    <form id="paymentForm">
+      <label for="cardNumber">Card Number:</label>
+      <input type="text" id="cardNumber" name="cardNumber" required>
+      <br>
+      <label for="cardName">Cardholder Name:</label>
+      <input type="text" id="cardName" name="cardName" required>
+      <br>
+      <label for="expiryDate">Expiry Date:</label>
+      <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YYYY" required>
+      <br>
+      <label for="cvv">CVV:</label>
+      <input type="text" id="cvv" name="cvv" required>
+      <br>
+      <input type="submit" value="Submit Payment">
+    </form>
+  </section> -->
