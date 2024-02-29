@@ -1,22 +1,29 @@
+// DOM elements
 const wrapper = document.querySelector('.wrapper');
 const loginLink = document.querySelector('.login-link');
 const registerLink = document.querySelector('.register-link');
 const btnPopup = document.querySelector('.btnLogin-popup');
 const iconClose = document.querySelector('.icon-close');
 
+// Event listeners for showing/hiding login and register forms
 registerLink.addEventListener('click', () => {
+    // Show the registration form
     wrapper.classList.add('active');
 });
 
 loginLink.addEventListener('click', () => {
+    // Show the login form
     wrapper.classList.remove('active');
 });
 
+// Event listeners for showing/hiding popup
 btnPopup.addEventListener('click', () => {
+    // Show the popup
     wrapper.classList.add('active-popup');
 });
 
 iconClose.addEventListener('click', () => {
+    // Hide the popup
     wrapper.classList.remove('active-popup');
 });
 
